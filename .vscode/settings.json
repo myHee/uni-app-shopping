@@ -1,0 +1,34 @@
+{
+  // 在保存时格式化文件
+  "editor.formatOnSave": true,
+  // 文件格式化配置
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // 配置语言的文件关联
+  "files.associations": {
+    "pages.json": "jsonc", // pages.json 可以写注释
+    "manifest.json": "jsonc", // manifest.json 可以写注释
+    "*.vue": "vue"
+  },
+  "vetur.validation.script": false,
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.format.enable": true, // eslint格式化开启
+  "eslint.validate": [
+    // eslint校验的文件列表
+    "javascript",
+    "vue",
+    "html"
+  ],
+  /* 添加如下配置 */
+  "vetur.format.defaultFormatter.js": "none", // 取消vetur默认的JavaScript格式化工具
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint" // 只采用eslint的格式化
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur" // vue文件还是采用vetur格式化
+  }
+}
